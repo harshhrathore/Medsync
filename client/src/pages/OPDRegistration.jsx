@@ -5,7 +5,7 @@ import '../styles/OPD.css';
 import '../styles/Loader.css';
 import jsPDF from 'jspdf';
 // import pincodes from 'indian-pincodes';
-import { pininfo } from 'indian_address';
+// import { pininfo } from 'indian_address';
 import { AiOutlineDownload } from 'react-icons/ai';
 import { TailSpin } from 'react-loader-spinner';
 import { useRecoilValue } from 'recoil';
@@ -73,7 +73,8 @@ function OPDRegistrationForm() {
     if (hospitalId) {
       fetchHospitalDetails(hospitalId);
     }
-  }, [isAuthenticated]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAuthenticated, hospitalId]);
   
   // Fetch all hospitals
   const fetchHospitals = async () => {

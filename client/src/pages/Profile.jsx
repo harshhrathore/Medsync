@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../store/userContext';
 import '../styles/UserProfile.css';
 import { databaseUrls } from '../data/databaseUrls';
-import { FaUser, FaEdit, FaCalendarAlt, FaUserMd, FaPlus, FaPhone, FaClock, FaHospital } from 'react-icons/fa';
+import { FaEdit, FaCalendarAlt, FaUserMd, FaPlus, FaPhone, FaClock, FaHospital } from 'react-icons/fa';
 import { MdEmail, MdLocationOn } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
 
@@ -50,7 +50,7 @@ const ProfilePage = () => {
   ];
 
   // Add state for all doctors
-  const [allDoctors, setAllDoctors] = useState([]);
+  // const [allDoctors, setAllDoctors] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {

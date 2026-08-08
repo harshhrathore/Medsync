@@ -166,7 +166,8 @@ function OPDSchedule() {
       .then((data) => data.json())
       .then((data) => {setHospitalData(data)})
     }
-  },[]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[hospitalId]);
 
   if (!hospitalId) {
     return <></>;
